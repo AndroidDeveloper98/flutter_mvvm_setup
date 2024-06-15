@@ -25,13 +25,3 @@ class AuthRepository {
     }
   }
 }
-
-
-
-// ! Testing Purposes
-
-// void main(List<String> args) async {
-//   AuthRepository auth = AuthRepository();
-//   final data = await auth.apiLogin(); 
-//   print(data["data"][1]["year"]);
-// }

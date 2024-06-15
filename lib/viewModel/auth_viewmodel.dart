@@ -35,9 +35,7 @@ class AuthViewModel with ChangeNotifier {
 
       final userPreference = Provider.of<UserViewModel>(context, listen: false);
       userPreference.saveUser(UserModel(token: value['token'].toString()));
-
       Utils.flushBarErrorMessage("Login Successfull", context);
-
       Navigator.pushNamed(context, RouteNames.home);
     }).onError((error, stackTrace) {
       Utils.flushBarErrorMessage(error.toString(), context);

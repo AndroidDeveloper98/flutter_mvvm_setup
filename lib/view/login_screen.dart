@@ -105,8 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPress: () {
                   if (_emailController.text.isEmpty &&
                       _passwordController.text.isEmpty) {
-                    Utils.flushBarErrorMessage(
-                        "email aur password de bhai", context);
+                    Utils.flushBarErrorMessage("email aur password de bhai", context);
                   } else if (_passwordController.text.isEmpty) {
                     Utils.flushBarErrorMessage("Password de bhai", context);
                   } else if (_emailController.text.isEmpty) {
@@ -143,10 +142,3 @@ class _LoginScreenState extends State<LoginScreen> {
     _passwordFocus.dispose();
   }
 }
-
-
-
-//! Recalling Providers
-// used for state Management (efficicent)
-// valueNotifier (for single value)
-//  valueListenerBuilder (which listens to this value)

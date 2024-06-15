@@ -22,12 +22,13 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => UserViewModel()),
         ChangeNotifierProvider(create: (_) => HomeViewModel())
       ],
-      child: WillPopScope(
-        onWillPop: () async {
+      child: PopScope(
+        canPop: true, //When false, blocks the current route from being popped.
+        onPopInvoked: (didPop) {
           Navigator.pop(context);
-          return true;
         },
         child: MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData(
             primarySwatch: Colors.blue,
